@@ -1,0 +1,38 @@
+body {
+  width: 800px;
+  margin: 10px auto;
+}
+
+#git_header h3 {
+  float: left;
+  height: 20px;
+  margin: 0 5px 0 0;
+}
+
+.clear {
+  clear: both;
+}
+
+#commands {
+  border: 2px solid #999;
+  float: right;
+  width: 187px;
+  height: 300px;
+}
+
+#commands h2{
+  margin: 0 auto;
+  padding-left: 15px;
+  border-bottom: 1px solid #999;
+}
+
+input {
+  border: 2px solid #999;
+  height: 20px;
+  margin-bottom: 10px;
+  width: 150px;
+}
+
+canvas  {
+  border: 2px solid #999;
+}
