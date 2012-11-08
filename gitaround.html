@@ -7,7 +7,7 @@
   <script src="javascripts/src/board.js"></script>
   <script src="javascripts/src/commands.js"></script>
   <script src="javascripts/src/game.js"></script>
-  <link rel="stylesheet" type="text/css" href="stylesheets/style.css"> 
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
   <title>Gitaround</title>
   <!-- <%= stylesheet_link_tag    "application", :media => "all" %> -->
   <!-- <%= javascript_include_tag "application" %> -->
@@ -49,7 +49,7 @@
         if($(this).val() === "git merge") {
           game.board.merge();
         }
-      }      
+      }
     });
   });
 </script>
@@ -61,14 +61,17 @@
 
   <div id="message"></div>
 
-  <div id="git_header"><h3>Git Command:</h3><input type="text" id="git_input" tabindex="1"></div>
+
   <div class="clear"></div>
+
+  <div id="container"></div>
 
   <div id="commands">
     <h2>Git Commands</h2>
     <ul></ul>
+    <div id="git_header"><h3>Git Command:</h3><input type="text" id="git_input" tabindex="1"></div>
   </div>
 
-  <div id="container"></div>
+
 </body>
 </html>

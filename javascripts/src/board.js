@@ -7,7 +7,17 @@ var Board = function(){
     width: 600,
     height: 300
   });
+
   this.layer = new Kinetic.Layer();
+
+  this.simpleText = new Kinetic.Text({
+    x: this.stage.getWidth() / 2 - 40,
+    y: 15,
+    text: "Level 1",
+    fontSize: 30,
+    fontFamily: "Calibri",
+    textFill: "green"
+  });
 
   this.start = new Kinetic.Rect({
     width: 50,
@@ -17,13 +27,15 @@ var Board = function(){
     strokeWidth: 2
   });
 
-  this.end = new Kinetic.Rect({
+  this.imageObj = new Image();
+  this.imageObj.src = "images/house.png";
+
+  this.end = new Kinetic.Image({
     width: 50,
     height: 50,
-    fill: 'red',
-    stroke: 'black',
-    strokeWidth: 2
+    image: this.imageObj
   });
+
 
   this.start_pos = {x:0,y:this.master_branch};
   this.start.setAttrs(this.start_pos);
@@ -56,14 +68,15 @@ var Board = function(){
     strokeWidth: 2
   });
 
-  this.player = new Kinetic.Rect({
+  this.imageObj2 = new Image();
+  this.imageObj2.src = "images/arrow.jpg";
+
+  this.player = new Kinetic.Image({
     x: 0,
     y: 0,
     width: 50,
     height: 50,
-    fill: 'blue',
-    stroke: 'black',
-    strokeWidth: 4
+    image: this.imageObj2
   });
 
 
@@ -83,6 +96,7 @@ Board.prototype = {
     this.layer.add(this.end);
     this.layer.add(this.masterBranch);
     this.layer.add(this.blocker);
+    this.layer.add(this.simpleText);
     this.stage.add(this.layer);
     this.startPlayer();
     this.player.moveToTop();
